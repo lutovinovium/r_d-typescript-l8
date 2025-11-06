@@ -1,0 +1,1 @@
+Simple web app written on vanilla TS which shows the tasks list and allows new task addition.
