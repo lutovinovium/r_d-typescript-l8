@@ -15,7 +15,7 @@ export class TaskService {
         const response = await fetch(`${API_BASE_URL}/tasks`);
         if (!response.ok) throw new Error('Failed to fetch tasks');
         let tasks: Task[] = await response.json();
-        this._tasks = tasks.sort((a, b) => a.id.localeCompare(b.id)).reverse();
+        this._tasks = tasks.reverse();
         return this._tasks;
     }
     public fetchTaskById = async (id: string) => {
